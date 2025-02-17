@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(46, 44, 44);
+}
+
+.header {
+    background-color: rgb(46, 44, 44);
+    color: #3498db;
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    color: #3498db;
+    font-weight: bold;
+}
+
+p,
+hr {
+    color: #fff;
+}
+
+.text {
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.post-container {
+    text-align: center;
+}

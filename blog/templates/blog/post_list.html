@@ -1,29 +1,24 @@
-<!doctype html>
-<html lang=pl>
+{% extends 'blog/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Post List</title>
-</head>
+{% block content %}
+{% for post in posts %}
 
-<body>
+<div class="post">
 
-    <div class="container">
-
-        {% for post in posts %}
-
-        <div class="post">
-
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.text|linebreaksbr }}</p>
+    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+    <p class="text">{{ post.text|linebreaksbr }}</p>
+    <div class="row data">
+        <div class="col-sm-4">
             <p>Published: {{ post.published_date }}</p>
-
         </div>
-
-        {% endfor %}
-
+        <div class="col-sm-4">
+            <p>Author: {{ post.autor }}</p>
+        </div>
     </div>
-</body>
 
-</html>
+</div>
+
+<hr>
+
+{% endfor %}
+{% endblock %}
