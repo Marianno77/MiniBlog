@@ -2,7 +2,11 @@
 
 {% block content %}
 <div class="post-container">
+    {% if not form.instance.title %}
     <h2>New post</h2>
+    {% else %}
+    <h2>Edit post</h2>
+    {% endif %}
 </div>
 <form method="post" class="post-form">
     {% csrf_token %}
