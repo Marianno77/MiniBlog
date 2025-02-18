@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
         {% block content %}
         {% endblock %}
         <div class="box">
-            <a href="{% url 'about' %}">
+            <a href="{% url 'about' %}" class="link">
                 <span class="glyphicon glyphicon-eye-open"></span>
                 <span class="link-txt">About me</span>
             </a>
