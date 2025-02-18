@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.template.defaultfilters import title
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
@@ -42,3 +43,11 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
 
     return render(request,'blog/post_new.html',{'form': form})
+
+def post_delete(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect('post_list')
+
+def about(request):
+    return render(request,'blog/about.html', {})

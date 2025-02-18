@@ -26,11 +26,11 @@ hr {
     margin-bottom: 5%;
 }
 
-.post-container {
+.box {
     text-align: center;
 }
 
-.add-txt {
+.link-txt {
     margin-left: 10px;
 }
 
@@ -52,10 +52,19 @@ hr {
     margin-bottom: 5%;
 }
 
-.post-container button {
+.box button {
     width: 30%;
     color: #3498db;
     font-weight: bold;
     font-size: medium;
     border-radius: 15px;
+}
+
+.about-txt {
+    padding: 5%;
+}
+
+.about-txt span {
+    margin-left: 5px;
+    font-weight: bold;
 }

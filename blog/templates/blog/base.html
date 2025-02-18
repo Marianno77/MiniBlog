@@ -19,8 +19,8 @@
         <div class="jumbotron text-center header">
             <h1><a href="{% url 'post_list' %}">Mini Blog</a></h1>
             {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span><span
-                    class="add-txt">Dodaj nowy post</span></a>
+            <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span><span class="link-txt">Add new
+                    post</span></a>
             {% endif %}
         </div>
 
@@ -28,7 +28,12 @@
 
         {% block content %}
         {% endblock %}
-
+        <div class="box">
+            <a href="{% url 'about' %}">
+                <span class="glyphicon glyphicon-eye-open"></span>
+                <span class="link-txt">About me</span>
+            </a>
+        </div>
     </div>
 </body>
 
